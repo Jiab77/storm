@@ -20,7 +20,7 @@
 #
 # Experimental auth support based on 1fichier specs. (might change in future versions)
 #
-# Version 0.0.1
+# Version 0.0.2
 
 # Options
 [[ -r $HOME/.debug ]] && set -o xtrace || set +o xtrace
@@ -37,11 +37,11 @@ USER_AGENT="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/535 (KHTML, like Gecko) Chr
 FILE_LIST="links.txt"
 
 # Internals
-BIN_ARIA=$(which aria2c 2>/dev/null)
-BIN_CURL=$(which curl 2>/dev/null)
-BIN_LFTP=$(which lftp 2>/dev/null)
-BIN_PGET=$(which pget 2>/dev/null)
-BIN_WGET=$(which wget 2>/dev/null)
+BIN_ARIA=$(command -v aria2c 2>/dev/null)
+BIN_CURL=$(command -v curl 2>/dev/null)
+BIN_LFTP=$(command -v lftp 2>/dev/null)
+BIN_PGET=$(command -v pget 2>/dev/null)
+BIN_WGET=$(command -v wget 2>/dev/null)
 MAX_CON=$(nproc)
 OUTPUT_FOLDER=$(pwd)
 
